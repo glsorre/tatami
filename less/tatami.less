@@ -1,0 +1,45 @@
+/*! tatami.css v0.1.0 | MIT License |
+*/
+
+/* parts of Preboot v2 are embedded | getpreboot.com |
+*/
+
+// Core variables and mixins
+@import "variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "mixins.less";
+@import "grid.less";
+
+// CSS Reset
+@import "normalize.less";
+
+//CSS Base
+@import "base.less";
+
+/******************************************************************************
+WRITE YOUR TATAMI STYLE
+******************************************************************************/
+#grid > .base-classes();
+
+#grid > .grid(1170px, 30px, 12);
+
+#grid > .grid(percentage(1), percentage(0.02564102564103), 12);
+
+@media only screen and (min-width: 980px) and (max-width: 1169px) {
+	#grid > .grid(980px, 24px, 12);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+	#grid > .grid(768px, 20px, 12);
+}
+
+#grid > .mobile(767px, 20px);
+
+.grid {
+	text-align: center;
+	background: #ddd;
+	margin: 5px 0;
+}
+
+.nested {
+	background: #bbb;
+}

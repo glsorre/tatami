@@ -1,0 +1,167 @@
+#grid {
+	.base-classes() {
+		.container,
+		.fluid-container {
+			.center-block();
+		}
+
+		.row,
+		.fluid-row {
+			.clearfix();
+
+			&>[class*="span"]:first-child {
+				margin-left: 0;
+			}
+		}
+
+		[class*="span"] {
+			float: left;
+			min-height: 1px;
+		}
+	}
+
+	.grid (@width, @gutterWidth, @columns) when (ispixel(@gutterWidth)) {
+
+		@columnWidth: ( @width - @gutterWidth * @columns ) / @columns;
+		
+		// helper class, will never show up in resulting css
+		// will be called as long the index is above 0
+		.spanX (@index) when (@index > 0) {
+
+			// .span30, .span_28, .... , .span_1
+			.span@{index} {
+				.span(@index);
+			}
+
+			// "call" the spanX class the first time with lower value
+			.spanX(@index - 1);
+		}
+
+		// end the loop when index is 0
+		.spanX (0) {}
+
+		// helper class, will never show up in resulting css
+		// will be called as long the index is above 0
+		.offsetX (@index) when (@index > 0) {
+
+			// .offset30, .offset_28, .... , .offset_1
+			.offset@{index} {
+				.offset(@index);
+			}
+
+			// "call" the offsetX class the first time with lower value
+			.offsetX(@index - 1);
+		}
+
+		// end the loop when index is 0
+		.offsetX (0) {}
+		
+		//calculate span width
+		.span (@cols) {
+      		width: (@columnWidth * @cols) + (@gutterWidth * (@cols - 1));
+		}
+		
+		//calculate offset margin-left 
+		.offset (@cols) {
+      		margin-left: (@columnWidth * @cols) + (@gutterWidth * (@cols + 1));
+		}
+		
+		//container class
+		.container {
+			width: @width - @gutterWidth;
+			padding: 0 @gutterWidth / 2;
+		}
+
+		//span common styles
+		[class*="span"] {
+			margin-left: @gutterWidth;
+		}
+
+		// "call" the spanX class the first time with highest value
+		.spanX(@columns);
+
+		// "call" the spanX class the first time with highest value
+		.offsetX(@columns);
+	}
+
+	.grid (@width, @gutterWidth, @columns) when (ispercentage(@gutterWidth)) {
+
+		@columnWidth: ( percentage(1) - @gutterWidth * (@columns - 1) ) / @columns;
+		
+		// helper class, will never show up in resulting css
+		// will be called as long the index is above 0
+		.spanX (@index) when (@index > 0) {
+
+			// .span30, .span_28, .... , .span_1
+			.fluid-row .span@{index} {
+				.span(@index);
+			}
+
+			// "call" the spanX class the first time with lower value
+			.spanX(@index - 1);
+		}
+
+		// end the loop when index is 0
+		.spanX (0) {}
+
+		// helper class, will never show up in resulting css
+		// will be called as long the index is above 0
+		.offsetX (@index) when (@index > 0) {
+
+			// .offset30, .offset_28, .... , .offset_1
+			.fluid-row .offset@{index} {
+				.offset(@index);
+			}
+
+			// "call" the offsetX class the first time with lower value
+			.offsetX(@index - 1);
+		}
+
+		// end the loop when index is 0
+		.offsetX (0) {}
+		
+		//calculate span width
+		.span (@cols) {
+      		width: (@columnWidth * @cols) + (@gutterWidth * (@cols - 1));
+		}
+		
+		//calculate offset margin-left 
+		.offset (@cols) {
+      		margin-left: (@columnWidth * @cols) + (@gutterWidth * (@cols + 1));
+		}
+		
+		//container class
+		.fluid-container {
+			max-width: @width;
+			padding: 0 @gutterWidth / 2;
+		}
+
+		//span common styles
+		.fluid-row [class*="span"] {
+			margin-left: @gutterWidth;
+		}
+
+		// "call" the spanX class the first time with highest value
+		.spanX(@columns);
+
+		// "call" the spanX class the first time with highest value
+		.offsetX(@columns);
+	}
+
+	.mobile (@maxWidth, @gutterWidth) {
+		@media only screen and (max-width: @maxWidth) {
+			.container {
+				width: auto;
+				padding: 0 @gutterWidth / 2;
+			}
+
+			.row [class*="span"],
+			.fluid-row [class*="span"]{
+				width: auto;
+				float: none;
+				margin-left: 0;
+			}
+		}
+	}
+
+}

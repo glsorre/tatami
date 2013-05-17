@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>CSS Framework</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="../css/tatami.min.css" type="text/css">
+    </head>
+    <body>
+      <div class="container">
+        <h1>Tatami<small> a beautiful, fully responsive, style agnostic CSS framework</small></h1>
+        <hr/>
+        <h2>The Fixed Grid</h2>
+        <p>
+          Grid description Grid description Grid description Grid description Grid description Grid description Grid description Grid description Grid description Grid description Grid description
+        </p>
+        <div class="fluid-row">
+          <div class="grid span1">1</div>
+          <div class="grid span11">11</div>
+        </div>
+        <div class="fluid-row">
+          <div class="grid span2">2</div>
+          <div class="grid span10">10</div>
+        </div>
+        <div class="fluid-row">
+          <div class="grid span3">3</div>
+          <div class="grid span9">9</div>
+        </div>
+        <div class="fluid-row">
+          <div class="grid span4">4</div>
+          <div class="grid span8">8</div>
+        </div>
+        <div class="fluid-row">
+          <div class="grid span5">5</div>
+          <div class="grid span7">7</div>
+        </div>
+        <div class="fluid-row">
+          <div class="grid span6">6
+            <div class="fluid-row">
+              <div class="grid nested span6">Nested Half</div>
+              <div class="grid nested span6">Nested Half</div>
+            </div>
+          </div>
+          <div class="grid span6">6
+            <div class="fluid-row">
+              <div class="grid nested span4">Nested Third</div>
+              <div class="grid nested span4">Nested Third</div>
+              <div class="grid nested span4">Nested Third</div>
+            </div>
+          </div>
+        </div>
+        <div class="fluid-row">
+          <div class="grid span7">7</div>
+          <div class="grid span5">5</div>
+        </div>
+        <div class="fluid-row">
+          <div class="grid span8">8</div>
+          <div class="grid span4">4</div>
+        </div>
+        <div class="fluid-row">
+          <div class="grid span9">9</div>
+          <div class="grid span3">3</div>
+        </div>
+        <div class="fluid-row">
+          <div class="grid span10">10</div>
+          <div class="grid span2">2</div>
+        </div>
+        <div class="fluid-row">
+          <div class="grid span11">11</div>
+          <div class="grid span1">1</div>
+        </div>
+        <hr/>
+        <h2>Tipography</h2>
+        <div class="fluid-row">
+          <div class="span6">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id est eu sem commodo pulvinar. <a href="">Duis urna tellus</a>, ullamcorper eu tempor sit amet, tristique at turpis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed vel porta diam. Quisque at velit vel ante aliquet ornare. Nam facilisis lobortis sapien, eget pulvinar justo porta eu. Nullam faucibus nisl non risus convallis id imperdiet lacus convallis. Cras venenatis gravida placerat. Duis ac lectus quis lectus gravida condimentum viverra quis ligula.
+            </p>
+          </div>
+          <div class="span6">
+            <blockquote>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum.
+              </p>
+              <cite>
+                Unknown Author - <a href="">Text</a>
+              </cite>
+            </blockquote>
+          </div>
+        </div>
+        <hr/>
+        <h2>Button</h2>
+        <p>
+          Button description Button description Button description Button description
+        </p>
+        <a class="button" href="">Click Me For Action</a>
+        <hr/>
+        <h2>Form</h2>
+        <p>
+          Button description Button description Button description Button description
+        </p>
+        <form action="">
+          
+          <!-- Label and text input -->
+          <label for="regularInput">Regular Input</label>
+          <input type="text" id="regularInput" placeholder="Insert..."/>
+         
+          <!-- Label and textarea -->
+          <label for="regularTextarea">Regular Textarea</label>
+          <textarea id="regularTextarea" placeholder="Insert..."></textarea>
+
+          <!-- Label and text input -->
+          <label for="regularInput">Full Width Input</label>
+          <input class="input-block-level" type="text" id="regularInput" placeholder="Insert..."/>
+         
+          <!-- Label and textarea -->
+          <label for="regularTextarea">Full Width Textarea</label>
+          <textarea class="input-block-level" placeholder="Insert..." id="regularTextarea"></textarea>
+         
+          <!-- Label and select list -->
+          <label for="selectList">Select List</label>
+          <select id="selectList">
+            <option value="Option 1">Option 1</option>
+            <option value="Option 2">Option 2</option>
+            <option value="Option 3">Option 3</option>
+          </select>
+         
+          <!-- Wrap checkbox/radio button groups in fieldsets -->
+          <fieldset>
+            
+            <!-- Give the fieldset a label -->
+            <label for="">Checkboxes</label>
+         
+            <!-- Wrap each checkbox in a label, then give it the input and span for the text option -->
+            <label for="regularCheckbox">
+              <input type="checkbox" id="regularCheckbox" value="checkbox 1" />
+              <span>Regular Checkbox</span>
+            </label>
+         
+            <label for="secondRegularCheckbox">
+              <input type="checkbox" id="secondRegularCheckbox" value="checkbox 2" />
+              <span>Regular Checkbox</span>
+            </label>
+          </fieldset>
+         
+          <fieldset>
+            <label for="">Radio Buttons</label>
+            <label for="regularRadio">
+              <input type="radio" name="radios" id="regularRadio" value="radio 1" />
+              <span>Regular Radio</span>
+            </label>
+            <label for="secondRegularRadio">
+              <input type="radio" name="radios" id="secondRegularRadio" value="radio 2" />
+              <span>Regular Radio</span>
+            </label>
+          </fieldset>
+         
+          <button type="submit">Submit Form</button>
+        </form>
+      </div>
+    </body>
+</html>

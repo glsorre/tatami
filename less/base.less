@@ -1,0 +1,198 @@
+body {
+	background: @backgroundColor;
+	font: @fontSize~"/"@baselineSize @baseFontStack;
+	color: @textColor;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: @titlesColor;
+	font-family: @titlesFontStack;
+	font-weight: bold;
+	margin: @baselineSize * .5 0;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {font-weight: inherit;}
+
+h1,
+h2,
+h3 { line-height: @baselineSize * 2; }
+
+h1 { font-size: @fontSize * 2.75; } // ~38px
+h2 { font-size: @fontSize * 2.25; } // ~32px
+h3 { font-size: @fontSize * 1.75; } // ~24px
+h4 { font-size: @fontSize * 1.25; } // ~18px
+h5 { font-size: @fontSize; }
+h6 { font-size: @fontSize * .85; } // ~12px
+
+h1 small { font-size: @fontSize * 1.75; } // ~24px
+h2 small { font-size: @fontSize * 1.25; } // ~18px
+h3 small { font-size: @fontSize; }
+h4 small { font-size: @fontSize; }
+
+p {
+  margin: 0 0 @baselineSize / 2;
+}
+
+em {font-style: italic; }
+strong {font-weight: bold; }
+small {font-size: 0.8em; }
+
+blockquote {
+  padding: 0 0 0 @lateralSize * .5;
+  margin: @baselineSize * .5 0;
+  border-left: @lateralSize * 0.16666666666667 solid @bordersColor;
+
+  font-size: @fontSize * 1.25;
+  font-weight: 300;
+  line-height: 1.25;
+  font-style: italic;
+
+  p {
+    margin-bottom: 0;
+  }
+  cite {
+    display: block;
+    line-height: @baselineSize;
+    color: @bordersColor;
+    font-style: normal;
+    font-size: @fontSize * .9;
+    &:before {
+      content: '\2014 \00A0';
+    }
+  }
+}
+
+// Horizontal rules
+hr {
+  margin: @baselineSize 0;
+  border: 0;
+  border-top: 1px solid @bordersColor;
+}
+
+a,
+a:visited {
+	color: @linkColor;
+	text-decoration: underline;
+	outline: 0;
+}
+a:hover,
+a:focus {
+	color: @linkHoverColor;
+}
+p a, p a:visited {
+	line-height: inherit;
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0 0 @baselineSize / 2 @lateralSize * 0.83333333333333;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+li {
+  line-height: @baselineSize;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  .buttonStyle(@buttonColor, @buttonHoverColor , @textColor, @formsBorderColor);
+  padding: 5px 10px;
+  margin: @baselineSize * .5 0;
+  font-size: @fontSize * 0.92857142857143;
+  outline: none;
+  line-height: @baselineSize;
+}
+
+form,
+fieldset {
+    margin: @baselineSize 0 @baselineSize * .5 0;
+}
+
+fieldset {
+    border: 1px solid @formsBorderColor;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+  color: @formsFocusBorderColor;
+  .placeholder(@formsBorderColor);
+
+  border: 1px solid @formsBorderColor;
+  display: block;
+  padding: 5px;
+  margin: @baselineSize * .5 0;
+  outline:none;
+  min-height: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea, {
+  &:focus {
+    border: 1px solid @formsFocusBorderColor;
+    //.drop-shadow(~"0 0 3px rgba(0,0,0,.5)");
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    color: @formsBorderColor;
+    margin: @baselineSize * 0.33333333333334 0;
+}
+
+select {
+  background: transparent;
+  padding: 5px;
+  min-height: 30px;
+  .appearance(menulist);
+  .border-radius(0px);
+}
+
+textarea {
+  .resizable(vertical);
+  min-height: 60px;
+}
+
+label,
+legend {
+  display: block;
+  font-size: @fontSize * .85;
+  margin: @baselineSize 0 0 0;
+  font-weight: bold;
+}
+
+fieldset label {
+  margin: @baselineSize * .2 0 0 0;
+}
+
+label span,
+legend span {
+  font-weight: normal;
+  color: #444;
+  margin: @baselineSize * .25 0;
+}
+
+.input-block-level {
+  .input-block-level();
+}
+
+.button.input-block-level{
+  text-align: center;
+}
+
