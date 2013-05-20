@@ -265,9 +265,10 @@
 	}
 
 	.mobile (@gutterWidth) {
-		.container {
+		.container,
+		.fluid-container {
 			width: auto;
-			padding: 0 @gutterWidth / 2;
+			padding: 0 @gutterWidth;
 		}
 
 		.row [class*="span"],
