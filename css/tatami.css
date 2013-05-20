@@ -450,7 +450,7 @@ h4 small {
   font-size: 14px;
 }
 p {
-  margin: 0 0 10px;
+  margin: 10px 0;
 }
 em {
   font-style: italic;
@@ -1055,9 +1055,10 @@ WRITE YOUR TATAMI STYLE
   }
 }
 @media only screen and (max-width: 767px) {
-  .container {
+  .container,
+  .fluid-container {
     width: auto;
-    padding: 0 7.5px;
+    padding: 0 15px;
   }
   .row [class*="span"],
   .fluid-row [class*="span"] {
