@@ -16,7 +16,7 @@ Tatami includes LESS mixins to obtain fluid and fixed grids.
 
 `#grid > .grid(@maxWidth, @%gutterWidth, @numberOfColumns)` prints fluid grid specific classes.
 
-`#grid > .mobile(@width, @pxGutterWitdh)` prints specific classes for mobile devices.
+`#grid > .mobile(@pxGutterWitdh)` prints specific classes for mobile devices.
 
 ####Usage Example
 
@@ -25,17 +25,19 @@ Tatami includes LESS mixins to obtain fluid and fixed grids.
 
 \#grid > .grid(1170px, 30px, 12);
 
-\#grid > .grid(percentage(1), 
-percentage(0.02564102564103), 12);
+\#grid > .grid(percentage(1), percentage(0.02564102564103), 12);
 
 @media only screen and (min-width: 980px) and (max-width: 1169px) {
 	#grid > .grid(980px, 24px, 12);
 }
+
 @media only screen and (min-width: 768px) and (max-width: 979px) {
 	#grid > .grid(768px, 20px, 12);
 }
 
-\#grid > .mobile(767px, 20px);
+@media only screen and (max-width: 767px) {
+	#grid > .mobile(15px);
+}
 ```
 
 ##Base stylesheet
@@ -50,7 +52,7 @@ Tatami defines a set of variables which guide the aspect defined in the base sty
 //Controls root base line and element margins
 @baselineSize: 20px;
 
-//Controls ul lateral size
+//Controls the ul margin-left, the blockquote margin-left and border and all the other lateral spacing
 @lateralSize: 30px;
 
 //background color
@@ -142,19 +144,19 @@ Tatami defines a set of variables which guide the aspect defined in the base sty
 
 ```Less
 \#gradient {
-	.horizontal(@startColor: #555, @endColor: #333)
+	.horizontal(@startColor, @endColor)
 
-	.vertical(@startColor: #555, @endColor: #333)
+	.vertical(@startColor, @endColor)
 
-	.directional(@startColor: #555, @endColor: #333, @deg: 45deg) 
+	.directional(@startColor, @endColor, @deg) 
 
-	.horizontal-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f)
+	.horizontal-three-colors(@startColor, @midColor, @colorStop, @endColor)
 
-	.vertical-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f)
+	.vertical-three-colors(@startColor, @midColor, @colorStop, @endColor)
 
-	.radial(@innerColor: #555, @outerColor: #333)
+	.radial(@innerColor, @outerColor)
 
-	.striped(@color: #555, @angle: 45deg)
+	.striped(@color, @angle)
 }
 ```
 

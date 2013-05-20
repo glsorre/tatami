@@ -198,7 +198,7 @@
 
 // Gradients
 #gradient {
-	.horizontal(@startColor: #555, @endColor: #333) {
+	.horizontal(@startColor, @endColor) {
 		background-color: @endColor;
 		background-image: -moz-linear-gradient(left, @startColor, @endColor); // FF 3.6+
 		background-image: -webkit-gradient(linear, 0 0, 100% 0, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
@@ -208,7 +208,7 @@
 		background-repeat: repeat-x;
 		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@startColor),argb(@endColor))); // IE9 and down
 	}
-	.vertical(@startColor: #555, @endColor: #333) {
+	.vertical(@startColor, @endColor) {
 		background-color: @endColor;
 		background-image: -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+
 		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
@@ -218,7 +218,7 @@
 		background-repeat: repeat-x;
 		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor))); // IE9 and down
 	}
-	.directional(@startColor: #555, @endColor: #333, @deg: 45deg) {
+	.directional(@startColor, @endColor, @deg) {
 		background-color: @endColor;
 		background-repeat: repeat-x;
 		background-image: -moz-linear-gradient(@deg, @startColor, @endColor); // FF 3.6+
@@ -226,7 +226,7 @@
 		background-image: -o-linear-gradient(@deg, @startColor, @endColor); // Opera 11.10
 		background-image: linear-gradient(@deg, @startColor, @endColor); // Standard, IE10
 	}
-	.horizontal-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f) {
+	.horizontal-three-colors(@startColor, @midColor, @colorStop, @endColor) {
 		background-color: mix(@midColor, @endColor, 80%);
 		background-image: -webkit-gradient(left, linear, 0 0, 0 100%, from(@startColor), color-stop(@colorStop, @midColor), to(@endColor));
 		background-image: -webkit-linear-gradient(left, @startColor, @midColor @colorStop, @endColor);
@@ -236,7 +236,7 @@
 		background-repeat: no-repeat;
 		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor))); // IE9 and down, gets no color-stop at all for proper fallback
 	}
-	.vertical-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f) {
+	.vertical-three-colors(@startColor, @midColor, @colorStop, @endColor) {
 		background-color: mix(@midColor, @endColor, 80%);
 		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), color-stop(@colorStop, @midColor), to(@endColor));
 		background-image: -webkit-linear-gradient(@startColor, @midColor @colorStop, @endColor);
@@ -246,7 +246,7 @@
 		background-repeat: no-repeat;
 		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor))); // IE9 and down, gets no color-stop at all for proper fallback
 	}
-	.radial(@innerColor: #555, @outerColor: #333) {
+	.radial(@innerColor, @outerColor) {
 		background-color: @outerColor;
 		background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(@innerColor), to(@outerColor));
 		background-image: -webkit-radial-gradient(circle, @innerColor, @outerColor);
@@ -254,7 +254,7 @@
 		background-image: -o-radial-gradient(circle, @innerColor, @outerColor);
 		background-repeat: no-repeat;
 	}
-	.striped(@color: #555, @angle: 45deg) {
+	.striped(@color, @angle) {
 		background-color: @color;
 		background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, rgba(255,255,255,.15)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255,255,255,.15)), color-stop(.75, rgba(255,255,255,.15)), color-stop(.75, transparent), to(transparent));
 		background-image: -webkit-linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);

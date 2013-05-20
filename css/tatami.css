@@ -647,10 +647,6 @@ WRITE YOUR TATAMI STYLE
 .fluid-row:after {
   clear: both;
 }
-.row > [class*="span"]:first-child,
-.fluid-row > [class*="span"]:first-child {
-  margin-left: 0;
-}
 [class*="span"] {
   float: left;
   min-height: 1px;
@@ -661,6 +657,9 @@ WRITE YOUR TATAMI STYLE
 }
 [class*="span"] {
   margin-left: 30px;
+}
+.row {
+  margin-left: -30px;
 }
 .span12 {
   width: 1140px;
@@ -741,77 +740,86 @@ WRITE YOUR TATAMI STYLE
 .fluid-row [class*="span"] {
   margin-left: 2.564102564103%;
 }
+.fluid-row {
+  margin-left: -2.564102564103%;
+}
+.fluid-row .span-golden-big {
+  width: 59.240594592880925%;
+}
+.fluid-row .span-golden-small {
+  width: 35.63120027891307%;
+}
 .fluid-row .span12 {
-  width: 100%;
+  width: 97.435897435897%;
 }
 .fluid-row .span11 {
-  width: 91.4529914529914%;
+  width: 89.10256410256366%;
 }
 .fluid-row .span10 {
-  width: 82.90598290598282%;
+  width: 80.76923076923033%;
 }
 .fluid-row .span9 {
-  width: 74.35897435897425%;
+  width: 72.435897435897%;
 }
 .fluid-row .span8 {
-  width: 65.81196581196566%;
+  width: 64.10256410256366%;
 }
 .fluid-row .span7 {
-  width: 57.264957264957076%;
+  width: 55.76923076923033%;
 }
 .fluid-row .span6 {
-  width: 48.717948717948495%;
+  width: 47.435897435897%;
 }
 .fluid-row .span5 {
-  width: 40.170940170939915%;
+  width: 39.10256410256366%;
 }
 .fluid-row .span4 {
-  width: 31.62393162393133%;
+  width: 30.769230769230333%;
 }
 .fluid-row .span3 {
-  width: 23.076923076922746%;
+  width: 22.435897435896997%;
 }
 .fluid-row .span2 {
-  width: 14.529914529914166%;
+  width: 14.102564102563665%;
 }
 .fluid-row .span1 {
-  width: 5.982905982905582%;
+  width: 5.769230769230333%;
 }
 .fluid-row .offset12 {
-  margin-left: 105.12820512820599%;
+  margin-left: 102.564102564103%;
 }
 .fluid-row .offset11 {
-  margin-left: 96.5811965811974%;
+  margin-left: 94.23076923076967%;
 }
 .fluid-row .offset10 {
-  margin-left: 88.03418803418882%;
+  margin-left: 85.89743589743634%;
 }
 .fluid-row .offset9 {
-  margin-left: 79.48717948718024%;
+  margin-left: 77.564102564103%;
 }
 .fluid-row .offset8 {
-  margin-left: 70.94017094017165%;
+  margin-left: 69.23076923076967%;
 }
 .fluid-row .offset7 {
-  margin-left: 62.393162393163074%;
+  margin-left: 60.89743589743633%;
 }
 .fluid-row .offset6 {
-  margin-left: 53.84615384615449%;
+  margin-left: 52.564102564102996%;
 }
 .fluid-row .offset5 {
-  margin-left: 45.29914529914591%;
+  margin-left: 44.23076923076967%;
 }
 .fluid-row .offset4 {
-  margin-left: 36.75213675213733%;
+  margin-left: 35.89743589743633%;
 }
 .fluid-row .offset3 {
-  margin-left: 28.205128205128748%;
+  margin-left: 27.564102564103%;
 }
 .fluid-row .offset2 {
-  margin-left: 19.658119658120164%;
+  margin-left: 19.230769230769667%;
 }
 .fluid-row .offset1 {
-  margin-left: 11.111111111111583%;
+  margin-left: 10.897435897436333%;
 }
 @media only screen and (min-width: 980px) and (max-width: 1169px) {
   .container {
@@ -820,6 +828,9 @@ WRITE YOUR TATAMI STYLE
   }
   [class*="span"] {
     margin-left: 24px;
+  }
+  .row {
+    margin-left: -24px;
   }
   .span12 {
     width: 956px;
@@ -902,6 +913,9 @@ WRITE YOUR TATAMI STYLE
   [class*="span"] {
     margin-left: 20px;
   }
+  .row {
+    margin-left: -20px;
+  }
   .span12 {
     width: 748px;
   }
@@ -978,7 +992,7 @@ WRITE YOUR TATAMI STYLE
 @media only screen and (max-width: 767px) {
   .container {
     width: auto;
-    padding: 0 10px;
+    padding: 0 7.5px;
   }
   .row [class*="span"],
   .fluid-row [class*="span"] {
@@ -990,7 +1004,8 @@ WRITE YOUR TATAMI STYLE
 .grid {
   text-align: center;
   background: #ddd;
-  margin: 5px 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .nested {
   background: #bbb;

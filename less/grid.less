@@ -8,10 +8,6 @@
 		.row,
 		.fluid-row {
 			.clearfix();
-
-			&>[class*="span"]:first-child {
-				margin-left: 0;
-			}
 		}
 
 		[class*="span"] {
@@ -76,6 +72,11 @@
 		[class*="span"] {
 			margin-left: @gutterWidth;
 		}
+		
+		//row negative margin
+		.row {
+			margin-left: -@gutterWidth;
+		}
 
 		// "call" the spanX class the first time with highest value
 		.spanX(@columns);
@@ -86,7 +87,7 @@
 
 	.grid (@width, @gutterWidth, @columns) when (ispercentage(@gutterWidth)) {
 
-		@columnWidth: ( percentage(1) - @gutterWidth * (@columns - 1) ) / @columns;
+		@columnWidth: ( percentage(1) - @gutterWidth * @columns ) / @columns;
 		
 		// helper class, will never show up in resulting css
 		// will be called as long the index is above 0
@@ -140,6 +141,19 @@
 		.fluid-row [class*="span"] {
 			margin-left: @gutterWidth;
 		}
+		
+		//fluid row negative margin
+		.fluid-row {
+			margin-left: -@gutterWidth;
+		}
+
+		//golden ratio columns
+		.fluid-row .span-golden-big {
+			width: percentage(1) / 1.618 - @gutterWidth;
+		}
+		.fluid-row .span-golden-small {
+			width: percentage(1) - percentage(1) / 1.618 - @gutterWidth;
+		}
 
 		// "call" the spanX class the first time with highest value
 		.spanX(@columns);
@@ -148,19 +162,17 @@
 		.offsetX(@columns);
 	}
 
-	.mobile (@maxWidth, @gutterWidth) {
-		@media only screen and (max-width: @maxWidth) {
-			.container {
-				width: auto;
-				padding: 0 @gutterWidth / 2;
-			}
+	.mobile (@gutterWidth) {
+		.container {
+			width: auto;
+			padding: 0 @gutterWidth / 2;
+		}
 
-			.row [class*="span"],
-			.fluid-row [class*="span"]{
-				width: auto;
-				float: none;
-				margin-left: 0;
-			}
+		.row [class*="span"],
+		.fluid-row [class*="span"]{
+			width: auto;
+			float: none;
+			margin-left: 0;
 		}
 	}
 
