@@ -2,6 +2,37 @@
 */
 /* parts of Preboot v2 are embedded | getpreboot.com |
 */
+.align-center {
+  text-align: center;
+}
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 /*! normalize.css v2.1.1 | MIT License | git.io/normalize |
 */
 /* ==========================================================================
@@ -636,6 +667,10 @@ WRITE YOUR TATAMI STYLE
   margin-left: auto;
   margin-right: auto;
 }
+.row,
+.fluid-row {
+  *zoom: 1;
+}
 .row:before,
 .fluid-row:before,
 .row:after,
@@ -748,6 +783,36 @@ WRITE YOUR TATAMI STYLE
 }
 .fluid-row .span-golden-small {
   width: 35.63120027891307%;
+}
+.fluid-row .span-whole {
+  width: 97.435897435897%;
+}
+.fluid-row .span-half {
+  width: 47.435897435897%;
+}
+.fluid-row .span-one-third {
+  width: 30.769230769230337%;
+}
+.fluid-row .span-two-third {
+  width: 64.10256410256368%;
+}
+.fluid-row .span-one-quarter {
+  width: 22.435897435897%;
+}
+.fluid-row .span-three-quarter {
+  width: 72.435897435897%;
+}
+.fluid-row .span-one-fifth {
+  width: 17.435897435897%;
+}
+.fluid-row .span-two-fifth {
+  width: 37.435897435897%;
+}
+.fluid-row .span-three-fifth {
+  width: 57.435897435897%;
+}
+.fluid-row .span-four-fifth {
+  width: 77.435897435897%;
 }
 .fluid-row .span12 {
   width: 97.435897435897%;

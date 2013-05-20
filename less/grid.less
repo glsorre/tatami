@@ -16,7 +16,7 @@
 		}
 	}
 
-	.grid (@width, @gutterWidth, @columns) when (ispixel(@gutterWidth)) {
+	.grid(@width, @gutterWidth, @columns) when (ispixel(@gutterWidth)) {
 
 		@columnWidth: ( @width - @gutterWidth * @columns ) / @columns;
 		
@@ -85,7 +85,7 @@
 		.offsetX(@columns);
 	}
 
-	.grid (@width, @gutterWidth, @columns) when (ispercentage(@gutterWidth)) {
+	.grid(@width, @gutterWidth, @columns) when (ispercentage(@gutterWidth)) {
 
 		@columnWidth: ( percentage(1) - @gutterWidth * @columns ) / @columns;
 		
@@ -154,12 +154,114 @@
 		.fluid-row .span-golden-small {
 			width: percentage(1) - percentage(1) / 1.618 - @gutterWidth;
 		}
+		
+		//portion columns
+		.fluid-row .span-whole {
+		  width: percentage(1) - @gutterWidth;
+		}
+
+		.fluid-row .span-half {
+		  width: percentage(1) / 2 - @gutterWidth;
+		}
+		
+		.fluid-row .span-one-third {
+		  width: percentage(1) / 3 - @gutterWidth;
+		}
+
+		.fluid-row .span-two-third {
+		  width: ( percentage(1) / 3 ) * 2 - @gutterWidth;
+		}
+
+		.fluid-row .span-one-quarter {
+		  width: percentage(1) / 4 - @gutterWidth;
+		}
+
+		.fluid-row .span-three-quarter {
+		  width: ( percentage(1) / 4 ) * 3 - @gutterWidth;
+		}
+
+		.fluid-row .span-one-fifth {
+		  width: percentage(1) / 5 - @gutterWidth;
+		}
+
+		.fluid-row .span-two-fifth {
+		  width: ( percentage(1) / 5 ) * 2 - @gutterWidth;
+		}
+
+		.fluid-row .span-three-fifth {
+		  width: ( percentage(1) / 5 ) * 3 - @gutterWidth;
+		}
+
+		.fluid-row .span-four-fifth {
+		  width: ( percentage(1) / 5 ) * 4 - @gutterWidth;
+		}
 
 		// "call" the spanX class the first time with highest value
 		.spanX(@columns);
 
 		// "call" the spanX class the first time with highest value
 		.offsetX(@columns);
+	}
+
+	.nestable-grid(@gutterWidth) when (ispercentage(@gutterWidth)) {
+		//span common styles
+		.fluid-row [class*="span"] {
+			margin-left: @gutterWidth;
+		}
+		
+		//fluid row negative margin
+		.fluid-row {
+			margin-left: -@gutterWidth;
+		}
+
+		//golden ratio columns
+		.fluid-row .span-golden-big {
+			width: percentage(1) / 1.618 - @gutterWidth;
+		}
+		.fluid-row .span-golden-small {
+			width: percentage(1) - percentage(1) / 1.618 - @gutterWidth;
+		}
+		
+		//portion columns
+		.fluid-row .span-whole {
+		  width: percentage(1) - @gutterWidth;
+		}
+
+		.fluid-row .span-half {
+		  width: percentage(1) / 2 - @gutterWidth;
+		}
+		
+		.fluid-row .span-one-third {
+		  width: percentage(1) / 3 - @gutterWidth;
+		}
+
+		.fluid-row .span-two-third {
+		  width: ( percentage(1) / 3 ) * 2 - @gutterWidth;
+		}
+
+		.fluid-row .span-one-quarter {
+		  width: percentage(1) / 4 - @gutterWidth;
+		}
+
+		.fluid-row .span-three-quarter {
+		  width: ( percentage(1) / 4 ) * 3 - @gutterWidth;
+		}
+
+		.fluid-row .span-one-fifth {
+		  width: percentage(1) / 5 - @gutterWidth;
+		}
+
+		.fluid-row .span-two-fifth {
+		  width: ( percentage(1) / 5 ) * 2 - @gutterWidth;
+		}
+
+		.fluid-row .span-three-fifth {
+		  width: ( percentage(1) / 5 ) * 3 - @gutterWidth;
+		}
+
+		.fluid-row .span-four-fifth {
+		  width: ( percentage(1) / 5 ) * 4 - @gutterWidth;
+		}
 	}
 
 	.mobile (@gutterWidth) {
