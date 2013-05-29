@@ -20,7 +20,7 @@ Tatami includes LESS mixins to obtain fluid and fixed grids.
 
 ####Usage Example
 
-```Less
+```less
 \#grid > .base-classes();
 
 \#grid > .grid(1170px, 30px, 12);
@@ -142,7 +142,7 @@ Tatami defines a set of variables which guide the aspect defined in the base sty
 
 ####Gradient Mixins
 
-```Less
+```less
 \#gradient {
 	.horizontal(@startColor, @endColor)
 
