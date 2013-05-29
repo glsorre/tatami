@@ -3,41 +3,69 @@ Tatami is a beautiful, fully responsive, style agnostic CSS boilerplate written 
 
 It is based on other similar projects as [Skeleton](getskeleton.com), [Preboot](getpreboot.com) and [Boostrap](twitter.github.io/bootstrap/‎). It includes:
 
-* a flexible CSS grid;
+* a fluid CSS grid;
 * a base stylesheet;
 * a set of useful LESS mixins.
 
-##Flexible CSS Grid
+##Fluid CSS Grid
 Tatami includes LESS mixins to obtain fluid and fixed grids.
 
-`#grid > .base-classes()` prints grids base classes.
+`#grid > .n_grid(25px);` prints grids base classes.
 
-`#grid > .grid(@width, @pxGutterWitdh, @numberOfColumns)` prints fixed grid specific classes.
+`grid > .mobile_ngrid(15px);` prints specific classes for mobile devices.
 
-`#grid > .grid(@maxWidth, @%gutterWidth, @numberOfColumns)` prints fluid grid specific classes.
+###Usage Example
+####Less File
+```Less
+\#grid > .n_grid(25px);
 
-`#grid > .mobile(@pxGutterWitdh)` prints specific classes for mobile devices.
-
-####Usage Example
-
-```less
-\#grid > .base-classes();
-
-\#grid > .grid(1170px, 30px, 12);
-
-\#grid > .grid(percentage(1), percentage(0.02564102564103), 12);
-
-@media only screen and (min-width: 980px) and (max-width: 1169px) {
-	#grid > .grid(980px, 24px, 12);
-}
-
-@media only screen and (min-width: 768px) and (max-width: 979px) {
-	#grid > .grid(768px, 20px, 12);
+.grid {
+	.center-block();
+	max-width: 1170px;
+	background: #ddd;
 }
 
 @media only screen and (max-width: 767px) {
-	#grid > .mobile(15px);
+	#grid > .mobile_ngrid(15px);
 }
+
+.unit {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	background: #ccc;
+	text-align: center;
+
+	p{
+		background: #bbb;
+	}
+}
+```
+####HTML File
+```html
+<div class="grid">
+  <div class="unit half">
+    <p>HALF</p>
+    <div class="grid">
+      <div class="unit one-third"><p>THIRD</p></div>
+      <div class="unit one-third"><p>THIRD</p></div>
+      <div class="unit one-third"><p>THIRD</p></div>
+    </div>
+  </div>
+  <div class="unit half">
+    <p>HALF</p>
+    <div class="grid">
+      <div class="unit golden-small no-gutters"><p>GOLDEN SMALL NO GUTTERS</p></div>
+      <div class="unit golden-big">
+        <p>GOLDEN BIG</p>
+        <div class="grid">
+          <div class="unit one-third no-gutters"><p>THIRD NO GUTTERS</p></div>
+          <div class="unit one-third"><p>THIRD</p></div>
+          <div class="unit one-third"><p>THIRD</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 ```
 
 ##Base stylesheet
@@ -97,6 +125,8 @@ Tatami defines a set of variables which guide the aspect defined in the base sty
 `.resizable(@direction)`;
 
 `.hide-text()` an image replacement mixin;
+
+`.image-replacement()` an image replacement mixin;
 
 `.text-truncate()` a text overflow management mixin;
 
