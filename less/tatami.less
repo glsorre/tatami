@@ -1,4 +1,4 @@
-/*! tatami.css v0.2.0 | MIT License |
+/*! tatami.css v0.4.0 | MIT License |
 */
 
 /* parts of Preboot v2 are embedded | getpreboot.com |
@@ -19,25 +19,13 @@
 WRITE YOUR TATAMI STYLE BELOW
 ******************************************************************************/
 
-#grid > .n_grid(25px);
-
 .grid {
 	.center-block();
 	max-width: 1170px;
-	background: #ddd;
 }
 
-.unit {
-	margin-top: 5px;
-	margin-bottom: 5px;
-	background: #ccc;
-	text-align: center;
-
-	p{
-		background: #bbb;
-	}
-}
+#grid > .n_grid(25px);
 
 @media only screen and (max-width: 767px) {
-	#grid > .mobile_ngrid(15px);
+	#grid > .n_grid_mobile(15px);
 }

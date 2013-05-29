@@ -1,18 +1,22 @@
 #Tatami CSS
 Tatami is a beautiful, fully responsive, style agnostic CSS boilerplate written in LESS.
 
-It is based on other similar projects as [Skeleton](getskeleton.com), [Preboot](getpreboot.com) and [Boostrap](twitter.github.io/bootstrap/‎). It includes:
+It is based on other similar projects as [Preboot v2](getpreboot.com), [Boostrap](twitter.github.io/bootstrap/‎), [Skeleton](getskeleton.com) and [Gridism](http://cobyism.com/).
 
-* a fluid CSS grid;
+Parts of [Preboot v2](getpreboot.com) are included in the code.
+
+It includes:
+
+* a fluid and nestable CSS grid;
 * a base stylesheet;
 * a set of useful LESS mixins.
 
-##Fluid CSS Grid
+##N-Grid
 Tatami includes LESS mixins to obtain fluid and fixed grids.
 
 `#grid > .n_grid(25px);` prints grids base classes.
 
-`grid > .mobile_ngrid(15px);` prints specific classes for mobile devices.
+`#grid > .mobile_ngrid(15px);` prints specific classes for mobile devices.
 
 ###Usage Example
 ####Less File
@@ -69,7 +73,7 @@ Tatami includes LESS mixins to obtain fluid and fixed grids.
 ```
 
 ##Base stylesheet
-Check the files into the expamles folder.
+Check the file into the expamles folder.
 
 Tatami defines a set of variables which guide the aspect defined in the base stylesheet.
 

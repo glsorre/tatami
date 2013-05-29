@@ -7,49 +7,249 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="../css/tatami.min.css" type="text/css">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
     </head>
     <body>
 
-      <div class="grid">
-
-        <div class="unit half">
-
-          <p>HALF</p>
-
-          <div class="grid">
-
-            <div class="unit one-third"><p>THIRD</p></div>
-            <div class="unit one-third"><p>THIRD</p></div>
-            <div class="unit one-third"><p>THIRD</p></div>
-
+      <header>
+        <div class="grid">
+          <div class="unit whole">
+            <h1>Tatami
+            <small>the base for CSS acrobatics</small></h1>
           </div>
-
         </div>
+      </header>
 
-        <div class="unit half">
-
-          <p>HALF</p>
-
-          <div class="grid">
-
-            <div class="unit golden-small no-gutters"><p>GOLDEN SMALL<br/>NO GUTTERS</div>
-
-            <div class="unit golden-big">
-              <p>GOLDEN BIG</p>
-              <div class="grid">
-
-                <div class="unit one-third no-gutters"><p>THIRD<br/>NO GUTTERS</p></div>
-                <div class="unit one-third no-gutters"><p>THIRD<br/>NO GUTTERS</p></div>
-                <div class="unit one-third no-gutters"><p>THIRD<br/>NO GUTTERS</p></div>
-
-              </div>
+      <section>
+        <div class="grid">
+          <div class="unit whole spaced">
+            <p class="p_large">A <em>lightweight</em>, <em>beautiful</em>, <em>responsive-ready</em> and <em>style-agnostic</em> CSS boilerplate.</p>
+            <p>Written in <a href="http://lesscss.org/">LESS</a>.
+            </p>
+            <a class="button">View on Github</a>
+          </div>
+        </div>
+        <div class="grid">
+            <div class="unit whole">
+              <p>Tatami is composed from three main components:</p>
             </div>
-
           </div>
-          
+        <div class="grid">
+          <div class="unit one-third">
+            <h2>The N-Grid</h2>
+            <p>
+              N-Grid is a fluid and nestable grid build around two main classes <code>.grid</code> and <code>.unit</code>.
+            </p>
+          </div>
+          <div class="unit one-third">
+            <h2>A Base Stylesheet</h2>
+            <p>
+              A set of rules to make beautiful the main elements of an HTML page.
+            </p>
+          </div>
+          <div class="unit one-third">
+            <h2>Variables and Mixins</h2>
+            <p>
+              Tatami defines a set powerful set of LESS mixins and variables to help you to customize and build on top of it.
+            </p>
+          </div>
         </div>
+      </section>
 
-      </div>
+      <section>
+        <div class="grid">
+          <div class="unit golden-small">
+            <h3>The N-Grid.</h3>
+            <p>
+               N-Grid is a set of two less Mixins which can be mixed to empower your responsive site.
+            </p>
+            <p>
+              In your main less file try:
+                <pre>
+.grid {
+  .center-block();
+  max-width: 1170px;
+}
+
+#grid > .n_grid(25px);
+
+@media only screen and (max-width: 767px) {
+  #grid > .mobile_ngrid(15px);
+}
+                </pre>
+                Once compiled the powerfulness of the .grid and .unit class will be available.
+            </p>
+            <p>
+              Wiew the source of this page for details.
+            </p>
+          </div>
+          <div class="unit golden-big">
+            <div class="grid">
+              <div class="unit half"><div class="bg">1/2</div></div>
+              <div class="unit half"><div class="bg">1/2</div></div>
+            </div>
+            <div class="grid">
+              <div class="unit one-third"><div class="bg">1/3</div></div>
+              <div class="unit two-thirds"><div class="bg">2/3</div></div>
+            </div>
+            <div class="grid">
+              <div class="unit one-third"><div class="bg">1/3</div></div>
+              <div class="unit one-third"><div class="bg">1/3</div></div>
+              <div class="unit one-third"><div class="bg">1/3</div></div>
+            </div>
+            <div class="grid">
+              <div class="unit two-fifths"><div class="bg">2/5</div></div>
+              <div class="unit three-fifths"><div class="bg">3/5</div></div>
+            </div>
+            <div class="grid">
+              <div class="unit one-sixth"><div class="bg">1/6</div></div>
+              <div class="unit five-sixths"><div class="bg">5/6</div></div>
+            </div>
+            <div class="grid">
+              <div class="unit golden-big"><div class="bg">Golden Ratio Big</div></div>
+              <div class="unit golden-small"><div class="bg">Golden Ratio Small</div></div>
+            </div>
+            <div class="grid">
+              <div class="unit golden-big no-gutters"><div class="bg">Golden Ratio Big without gutters</div></div>
+              <div class="unit golden-small no-gutters"><div class="bg">Golden Ratio Small without gutters</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="grid">
+          <div class="unit golden-small">
+            <h3>The Base Stylesheet</h3>
+          </div>
+          <div class="unit golden-big">
+            <h4>A paragraph with style</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id est eu sem commodo pulvinar. <a href="">Duis urna tellus</a>, ullamcorper eu tempor sit amet, tristique at turpis. Cum sociis natoque penatibus et magnis dis <em>parturient montes</em>, nascetur ridiculus mus. Sed vel porta diam. Quisque at velit vel ante aliquet ornare. Nam facilisis lobortis sapien, eget <strong>pulvinar</strong> justo porta eu. Nullam faucibus nisl non risus convallis id imperdiet lacus convallis. Cras venenatis gravida placerat. Duis ac <code>lectus quis</code> lectus gravida condimentum viverra quis ligula.
+            </p>
+            <h4>A blockquote</h4>
+            <blockquote>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum.
+              </p>
+              <cite>
+                Unknown Author - <a href="">Text</a>
+              </cite>
+            </blockquote>
+            <h4>A pre</h4>
+            <pre>
+function myFunction()
+{
+alert("Hello World!");
+}
+            </pre>
+            <h4>A Button</h4>
+              <a class="button" href="">Click Me For Action</a>
+            <h4>A form</h4>
+              <form action="">
+                
+                <!-- Label and text input -->
+                <label for="regularInput">Regular Input</label>
+                <input type="text" id="regularInput" placeholder="Insert..."/>
+               
+                <!-- Label and textarea -->
+                <label for="regularTextarea">Regular Textarea</label>
+                <textarea id="regularTextarea" placeholder="Insert..."></textarea>
+
+                <!-- Label and text input -->
+                <label for="regularInput">Full Width Input</label>
+                <input class="input-block-level" type="text" id="regularInput" placeholder="Insert..."/>
+               
+                <!-- Label and textarea -->
+                <label for="regularTextarea">Full Width Textarea</label>
+                <textarea class="input-block-level" placeholder="Insert..." id="regularTextarea"></textarea>
+               
+                <!-- Label and select list -->
+                <label for="selectList">Select List</label>
+                <select id="selectList">
+                  <option value="Option 1">Option 1</option>
+                  <option value="Option 2">Option 2</option>
+                  <option value="Option 3">Option 3</option>
+                </select>
+               
+                <!-- Wrap checkbox/radio button groups in fieldsets -->
+                <fieldset>
+                  
+                  <!-- Give the fieldset a label -->
+                  <label for="">Checkboxes</label>
+               
+                  <!-- Wrap each checkbox in a label, then give it the input and span for the text option -->
+                  <label for="regularCheckbox">
+                    <input type="checkbox" id="regularCheckbox" value="checkbox 1" />
+                    <span>Regular Checkbox</span>
+                  </label>
+               
+                  <label for="secondRegularCheckbox">
+                    <input type="checkbox" id="secondRegularCheckbox" value="checkbox 2" />
+                    <span>Regular Checkbox</span>
+                  </label>
+                </fieldset>
+               
+                <fieldset>
+                  <label for="">Radio Buttons</label>
+                  <label for="regularRadio">
+                    <input type="radio" name="radios" id="regularRadio" value="radio 1" />
+                    <span>Regular Radio</span>
+                  </label>
+                  <label for="secondRegularRadio">
+                    <input type="radio" name="radios" id="secondRegularRadio" value="radio 2" />
+                    <span>Regular Radio</span>
+                  </label>
+                </fieldset>
+               
+                <button type="submit">Submit Form</button>
+              </form>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="grid">
+          <div class="unit golden-small">
+            <h3>LESS Variables and Mixins</h3>
+            <p>For a complete list of the embeded mixin check on <a href="https://github.com/uhpnou/tatami">github</a>.</p>
+          </div>
+          <div class="unit golden-big">
+            <h4>Default Variables</h4>
+              <p>Tatami is highly customizable trough the following LESS variables:</p>
+              <pre>
+@fontSize: 14px; //Controls root font size
+
+@baselineSize: 20px; ////Controls root base line and element margins
+
+@lateralSize: 30px; //Controls ul lateral size
+
+@backgroundColor: #fff; //background color
+
+@textColor: #444; //root text color
+
+//hr and blockquote border colors 
+@bordersColor: darken(spin(@textColor, 5), 10%);
+@formsBorderColor: lighten(spin(@textColor, -10), 20%);
+@formsFocusBorderColor: darken(spin(@textColor, 10), 20%);
+
+@titlesColor: darken(spin(@textColor, 5), 10%); //titles color
+
+//link and link:hover colors
+@linkColor: lighten(spin(@textColor, -5), 10%);
+@linkHoverColor: darken(spin(@textColor, 5), 10%);
+
+//button colors
+@buttonColor: #ddd;
+@buttonHoverColor: #bbb;
+
+//base font stack and titles font stack
+@baseFontStack: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@titlesFontStack: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+              </pre>
+          </div>
+        </div>
+      </section>  
 
     </body>
 </html>

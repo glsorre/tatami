@@ -1,4 +1,4 @@
-/*! tatami.css v0.1.0 | MIT License |
+/*! tatami.css v0.2.0 | MIT License |
 */
 /* parts of Preboot v2 are embedded | getpreboot.com |
 */
@@ -490,13 +490,13 @@ hr {
 }
 a,
 a:visited {
-  color: #444444;
+  color: #5e5e5e;
   text-decoration: underline;
   outline: 0;
 }
 a:hover,
 a:focus {
-  color: arken(#444444, 10%);
+  color: #2b2b2b;
 }
 p a,
 p a:visited {
@@ -525,10 +525,10 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  background: #cccccc;
-  -webkit-box-shadow: inset 0px 1px 2px #ebebeb;
-  -moz-box-shadow: inset 0px 1px 2px #ebebeb;
-  box-shadow: inset 0px 1px 2px #ebebeb;
+  background: #dddddd;
+  -webkit-box-shadow: inset 0px 1px 2px #f1f1f1;
+  -moz-box-shadow: inset 0px 1px 2px #f1f1f1;
+  box-shadow: inset 0px 1px 2px #f1f1f1;
   border: 1px solid #777777;
   color: #444444;
   cursor: pointer;
@@ -545,14 +545,14 @@ button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover {
-  background: #aaaaaa;
+  background: #bbbbbb;
 }
 .button:active,
 button:active,
 input[type="submit"]:active,
 input[type="reset"]:active,
 input[type="button"]:active {
-  background: #aaaaaa;
+  background: #bbbbbb;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -659,8 +659,14 @@ legend span {
   text-align: center;
 }
 /******************************************************************************
-WRITE YOUR TATAMI STYLE
+WRITE YOUR TATAMI STYLE BELOW
 ******************************************************************************/
+.grid {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1170px;
+}
 .grid,
 .unit {
   -webkit-box-sizing: border-box;
@@ -721,27 +727,17 @@ WRITE YOUR TATAMI STYLE
 .grid .four-fifths {
   width: 80%;
 }
+.grid .one-sixth {
+  width: 16.666666666666668%;
+}
+.grid .five-sixths {
+  width: 83.33333333333334%;
+}
 .unit {
   padding: 0 12.5px;
 }
 .grid .grid {
   margin: 0 -12.5px;
-}
-.grid {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1170px;
-  background: #ddd;
-}
-.unit {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  background: #ccc;
-  text-align: center;
-}
-.unit p {
-  background: #bbb;
 }
 @media only screen and (max-width: 767px) {
   .grid {

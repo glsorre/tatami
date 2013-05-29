@@ -1,0 +1,30 @@
+/*.unit {
+	background: #ccc;
+}
+
+h1,h2,h3,h4,h5,p {
+		background: #aaa;
+}*/
+
+.p_large {
+	font-size: 23px;
+	line-height: 34.5px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.bg {
+	background: #ddd;
+	padding: 20px;
+	text-align: center;
+	margin-bottom: 15px
+}
+
+.spaced {
+	margin-bottom: 80px;
+}
+
+header, section {
+	margin-top: 120px;
+	margin-bottom: 120px;
+}
