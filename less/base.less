@@ -102,6 +102,15 @@ img {
 	height: auto;
 }
 
+pre, code {
+  font-family: @codeFontStack;
+}
+
+pre {
+  font-size: @fontSize * 0.92857142857143;
+  line-height: @baselineSize * 0.92857142857143;;
+}
+
 .button,
 button,
 input[type="submit"],
@@ -186,10 +195,6 @@ legend span {
   font-weight: normal;
   color: #444;
   margin: @baselineSize * .25 0;
-}
-
-.input-block-level {
-  .input-block-level();
 }
 
 .button.input-block-level{

@@ -1,5 +1,5 @@
 #Tatami CSS
-Tatami is a beautiful, fully responsive, style agnostic CSS boilerplate written in LESS.
+Tatami is a lightweight, beautiful, fully responsive, style agnostic CSS boilerplate written in LESS.
 
 It is based on other similar projects as [Preboot v2](getpreboot.com), [Boostrap](twitter.github.io/bootstrap/‎), [Skeleton](getskeleton.com) and [Gridism](http://cobyism.com/).
 
@@ -112,15 +112,29 @@ Tatami defines a set of variables which guide the aspect defined in the base sty
 //base font stack and titles font stack
 @baseFontStack: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @titlesFontStack: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@codeFontStack: Consolas, monaco, monospace;
 ```
 
 ##LESS Mixins
 
+####Generic Classes
+`.align-center`;
+
+`.align-left`;
+
+`.align-right`;
+
+`.pull-left`;
+
+`.pull-right`;
+
+`.clearfix` a micro clearfix mixin;
+
+`.center-block`;
+
+`.input-block-level()` a mixin to full-width input elements;
+
 ####Generic Mixins
-
-`.clearfix()` a micro clearfix mixin;
-
-`.center-block()`;
 
 `.size(@width, @height)`;
 
@@ -137,8 +151,6 @@ Tatami defines a set of variables which guide the aspect defined in the base sty
 `.content-columns(@width, @count, @gap)` a CSS3 columns mixin;
 
 `.opacity(@opacity)`
-
-`.input-block-level()` a mixin to full-width input elements;
 
 `.appearance(@string)`;
 

@@ -1,4 +1,4 @@
-/*! tatami.css v0.2.0 | MIT License |
+/*! tatami.css v0.4.0 | MIT License |
 */
 /* parts of Preboot v2 are embedded | getpreboot.com |
 */
@@ -32,6 +32,13 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 /*! normalize.css v2.1.1 | MIT License | git.io/normalize |
 */
@@ -520,6 +527,14 @@ img {
   max-width: 100%;
   height: auto;
 }
+pre,
+code {
+  font-family: Consolas, monaco, monospace;
+}
+pre {
+  font-size: 13.000000000000021px;
+  line-height: 18.5714285714286px;
+}
 .button,
 button,
 input[type="submit"],
@@ -647,13 +662,6 @@ legend span {
   font-weight: normal;
   color: #444;
   margin: 5px 0;
-}
-.input-block-level {
-  display: block;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 .button.input-block-level {
   text-align: center;
