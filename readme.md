@@ -3,6 +3,8 @@ Tatami is a lightweight, beautiful, fully responsive, style agnostic CSS boilerp
 
 It is based on other similar projects as [Preboot v2](getpreboot.com), [Boostrap](twitter.github.io/bootstrap/‎), [Skeleton](getskeleton.com) and [Gridism](http://cobyism.com/).
 
+[Normalize.css](http://necolas.github.io/normalize.css/) is embedded.
+
 Parts of [Preboot v2](getpreboot.com) are included in the code.
 
 It includes:
