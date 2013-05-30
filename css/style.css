@@ -1,0 +1,32 @@
+.p_large {
+	font-size: 23px;
+	line-height: 34.5px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.button_large {
+	font-size: 17px;
+	padding: 12px;
+}
+
+.bg {
+	background: #ddd;
+	padding: 20px;
+	text-align: center;
+	margin-bottom: 15px
+}
+
+.spaced {
+	margin-bottom: 80px;
+}
+
+header, section {
+	margin-top: 120px;
+	margin-bottom: 120px;
+}
+
+header h1 {
+	padding-left: 56px;
+	background: url(../img/tatami_logo.png) left center no-repeat;
+}
