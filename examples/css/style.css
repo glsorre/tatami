@@ -25,3 +25,8 @@ header, section {
 	margin-top: 120px;
 	margin-bottom: 120px;
 }
+
+header h1 {
+	padding-left: 56px;
+	background: url(../img/tatami_logo.png) left center no-repeat;
+}
