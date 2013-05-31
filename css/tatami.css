@@ -400,7 +400,7 @@ table {
 }
 body {
   background: #ffffff;
-  font: 14px / 20px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 14px/20px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #444444;
 }
 h1,
@@ -506,10 +506,6 @@ a:hover,
 a:focus {
   color: #2b2b2b;
 }
-p a,
-p a:visited {
-  line-height: inherit;
-}
 ul,
 ol {
   padding: 0;
@@ -572,6 +568,14 @@ input[type="button"]:active {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
+}
+.button:visited,
+button:visited,
+input[type="submit"]:visited,
+input[type="reset"]:visited,
+input[type="button"]:visited {
+  color: #444444;
+  text-decoration: none;
 }
 form,
 fieldset {
