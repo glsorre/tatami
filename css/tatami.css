@@ -1,4 +1,4 @@
-/*! tatami.css v0.4.1 | MIT License |
+/*! tatami.css v0.4.2 | MIT License |
 */
 /* parts of Preboot v2 are embedded | getpreboot.com |
    normalize.css is embedded | http://necolas.github.io/normalize.css/ |
@@ -108,6 +108,8 @@ html {
   /* 3 */
 
   -ms-text-size-adjust: 100%;
+  /* 4 */
+
   -webkit-text-size-adjust: 100%;
   /* 4 */
 
@@ -646,6 +648,9 @@ select {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 }
 textarea {
   resize: vertical;

@@ -83,7 +83,7 @@
 // Opacity
 .opacity(@opacity) {
   opacity: @opacity;
-  @opacity-ie: @opacity * 100;
+  @opacity-ie: (@opacity * 100);
   filter: ~"alpha(opacity=@{opacity-ie})"; // IE8
 }
 
@@ -172,7 +172,7 @@
 	-webkit-border-radius: @radius;
 	-moz-border-radius: @radius;
 	border-radius: @radius;
-	//.background-clip(padding-box);
+	.background-clip(padding-box);
 }
 .border-top-radius(@radius) {
 	border-top-right-radius: @radius;
