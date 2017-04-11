@@ -1,19 +1,19 @@
 //Variables
 
 //Controls root font size
-@fontSize: 14px;
+@fontSize: 16px;
 
 //Controls root base line and element margins
-@baselineSize: 20px;
+@baselineSize: 24px;
 
 //Controls ul lateral size
 @lateralSize: 30px;
 
 //background color
-@backgroundColor: #fff;
+@backgroundColor: lighten(@textColor, 80%);
 
 //root text color
-@textColor: #444;
+@textColor: #322933;
 
 //hr and blockquote border colors 
 @bordersColor: darken(spin(@textColor, 5), 10%);
@@ -28,8 +28,8 @@
 @linkHoverColor: darken(spin(@textColor, 5), 10%);
 
 //button colors
-@buttonColor: #ddd;
-@buttonHoverColor: #bbb;
+@buttonColor: lighten(@textColor, 80%);
+@buttonHoverColor: lighten(@textColor, 78%);
 
 //base, titles and code font stack
 @baseFontStack: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
